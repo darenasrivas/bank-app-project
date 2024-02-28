@@ -192,9 +192,3 @@ const displaySummary = function (movements) {
   labelSumOut.textContent = `${Math.abs(sumOut).toFixed(2)}$`
 }
 
-// Mostramos los
-
-// SUBIR APP EN REACT
-
-// Se compila con: npm run build
-// Subir la carpeta build a certweb// gh-pages ojo, la carpeta no está en el raiz

@@ -26,11 +26,77 @@
       crossorigin="anonymous"
     ></script>
 
+    <style>
+      /* Estilo para el cuerpo con imagen de fondo */
+      body::before {
+        background-image: url('bank.jpeg'); /* Ruta a tu imagen de fondo */
+        content: ''; /* Contenido vacío */
+        position: absolute; /* Posición absoluta para cubrir toda el cuerpo */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('bank.jpg'); /* Ruta a tu imagen de fondo */
+        background-size: cover; /* Cubre toda el área del cuerpo */
+        background-position: center; /* Centra la imagen */
+        opacity: 0.5; /* Opacidad del fondo */
+        z-index: -1; /* Asegura que el pseudo-elemento esté detrás del contenido */
+        position: fixed;
+    }
+    </style>
+
     <title>App Banco</title>
   </head>
+  
   <body>
     <!-- LOGIN -->
 
+    <section class="h-100">
+      <div class="container h-100">
+        <div class="row justify-content-sm-center h-100 fade-in-from-top" id="miDiv">
+          <div class="col-sm-3 mt-5">
+            <div class="text-center my-5">
+              <img src="logo.png" alt="logo" width="100">
+            </div>
+            <div class="card shadow-lg">
+              <div class="card-body p-5">
+                <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
+                <form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+                  <div class="mb-3">
+                    <label class="mb-2 text-muted" for="email">User</label>
+                    <input type="email" class="form-control" name="email" value="" id="Username" placeholder="User Name"
+                    required autofocus>
+                  </div>
+  
+                  <div class="mb-3">
+                    <div class="mb-2 w-100">
+                      <label class="text-muted" for="password">PIN</label>
+                    </div>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="PIN" required>
+                  </div>
+  
+                  <div class="d-flex align-items-center">
+                    <button type="submit" class="btn btn-primary m-auto">
+                      Login
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer py-3 border-0">
+                <div class="text-center">
+                  Copyright &copy; 2024 &mdash; Banco Imaginario
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+<!-- 
     <div class="container">
       <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -72,10 +138,10 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- TOP NAVIGATION -->
-    <nav>
+    <!-- <nav>
       <p class="welcome">Log in to get started</p>
       <img src="logo.png" alt="Logo" class="logo" />
       <form class="login">
@@ -84,7 +150,7 @@
           placeholder="user"
           class="login__input login__input--user"
         />
-        <!-- In practice, use type="password" -->
+       
         <input
           type="text"
           placeholder="PIN"
@@ -93,7 +159,7 @@
         />
         <button class="login__btn">&rarr;</button>
       </form>
-    </nav>
+    </nav> -->
 
     <main class="app">
       <!-- BALANCE -->
@@ -178,6 +244,6 @@
       </p>
     </main>
 
-    <script src="script.js"></script>
+    <script src="scriptpruebas.js"></script>
   </body>
 </html>

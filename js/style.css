@@ -295,3 +295,25 @@ h2 {
 .timer {
   font-weight: 600;
 }
+
+/* ///// CSS PROPIO ///// */
+
+.fade-in-from-top {
+  opacity: 0; /* Inicialmente invisible */
+  transform: translateY(-50px); /* Desplazado hacia arriba */
+}
+
+.fade-in-from-top.fade-in {
+  animation: fadeInFromTop 2s ease forwards; /* Animación */
+}
+
+@keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px); /* Inicio de la animación */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Fin de la animación */
+  }
+}
